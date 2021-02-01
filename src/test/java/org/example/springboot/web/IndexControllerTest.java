@@ -7,8 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.test.context.junit4.SpringRunner;
-
-import static org.junit.Assert.*;
 import static org.springframework.boot.test.context.SpringBootTest.WebEnvironment.*;
 
 @RunWith(SpringRunner.class)
@@ -16,7 +14,7 @@ import static org.springframework.boot.test.context.SpringBootTest.WebEnvironmen
 public class IndexControllerTest {
     @Autowired
     private TestRestTemplate restTemplate;
-    // test
+
     @Test
     public void 메인페이지_로딩(){
         // when
@@ -25,4 +23,5 @@ public class IndexControllerTest {
         // then
         Assertions.assertThat(body).contains("스프링 부트로 시작하는 웹 서비스");
     }
+
 }
